@@ -14,4 +14,6 @@ resource "docker_container" "phpmyadmin" {
     external = "8081"
     ip = "0.0.0.0"
   }
+  depends_on = [docker_container.mariadb]
+  links = [docker_container.mariadb.name]
 }

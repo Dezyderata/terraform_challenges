@@ -15,8 +15,8 @@ resource "docker_container" "mariadb" {
     value = "second"
   }
   env = [
-    "MYSQL_ROOT_PASSWORD = 1234",
-    "MYSQL_DATABASE = 'simple-website'"
+    "MYSQL_ROOT_PASSWORD=1234",
+    "MYSQL_DATABASE=simple-website"
   ]
   volumes {
     container_path = "/var/lib/mysql"
